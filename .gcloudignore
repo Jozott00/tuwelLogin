@@ -46,7 +46,6 @@ Thumbs.db
 
 # Misc
 **/info.txt
-**/.env
 **/.sass-cache
 **/connect.lock
 **/coverage

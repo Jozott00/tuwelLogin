@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const path = require('path');
 const express = require('express');
 const Csryptr = require('cryptr');
-const cryptr = new Csryptr(String.toString(process.env.SECRET_KEY));
+const cryptr = new Csryptr(process.env.SECRET_KEY);
 const bodyParser = require('body-parser');
 
 const session = require('./lib/session');
