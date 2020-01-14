@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Du wirst weitergeleitet...</title>
+  </head>
+  <body>
+    <style>
+      .load {
+        z-index: -1;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 123, 255, 0.75);
+      }
+
+      .info {
+        z-index: 123;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 123, 255, 0.75);
+      }
+
+      .active {
+        z-index: 100;
+        opacity: 1;
+      }
+      .spinner {
+        margin: calc(25vh - 9px) auto 0;
+        width: 70px;
+        text-align: center;
+      }
+
+      .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: white;
+
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      }
+
+      .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+
+      .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+
+      @-webkit-keyframes sk-bouncedelay {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+        }
+
+        40% {
+          -webkit-transform: scale(1);
+        }
+      }
+
+      @keyframes sk-bouncedelay {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <div class="load active" id="load">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <!-- action="https://oase.it.tuwien.ac.at/AuthServ.authenticate?app=36" -->
+    <!-- action="https://tuwel.tuwien.ac.at/my/" -->
+    <form
+      action="https://oase.it.tuwien.ac.at/AuthServ.authenticate?app=36"
+      method="POST"
+    >
+      <input id="name" name="name" value="<%= name %>" type="hidden" />
+      <input type="hidden" id="pw" name="pw" value="<%= pw %>" />
+      <!-- <label for="app" class="sr-only">Password</label> -->
+      <input type="hidden" id="app" name="app" value="36" />
+      <button id="btn" type="submit" style="opacity: 0;"></button>
+    </form>
+    <script>
+      (function() {
+        document.getElementById('btn').click();
+      })();
+    </script>
+  </body>
+</html>

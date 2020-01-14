@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tuwel Anmeldeplattform" />
+    <meta name="author" content="Johannes Zottele" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Tuwel Login</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sign-in/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center">
+    <form
+      class="form-signin"
+      action="https://oase.it.tuwien.ac.at/AuthServ.authenticate?app=36"
+      method="POST"
+    >
+      <a href="http://www.tuwien.at">
+        <img class="mb-4" src="tu_logo.png" alt="" height="72" />
+      </a>
+      <h1 class="h3 mb-3 font-weight-normal">Tuwel Login</h1>
+      <!-- <label for="name" class="sr-only">Matrikelnummer</label> -->
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        placeholder="Matrikelnummer"
+        autocomplete="username"
+        required
+        autofocus
+      />
+      <!-- <label for="pw" class="sr-only">Password</label> -->
+      <input
+        type="password"
+        id="pw"
+        name="pw"
+        class="form-control"
+        placeholder="Passwort"
+        autocomplete="current-password"
+        required
+      />
+      <!-- <label for="app" class="sr-only">Password</label> -->
+      <input
+        type="hidden"
+        id="app"
+        name="app"
+        class="form-control"
+        value="36"
+        required
+      />
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Log dich ein
+      </button>
+      <p class="mt-5 mb-3 text-muted">
+        <a href="/createbookmark">
+          Erstelle einen Link für dein Lesezeichen!
+        </a>
+      </p>
+    </form>
+    <a class="impressum" href="/impressum">Impressum / Disclaimer</a>
+  </body>
+</html>

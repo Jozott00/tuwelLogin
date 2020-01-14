@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tuwel Anmeldeplattform" />
+    <meta name="author" content="Johannes Zottele" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Kopiere deinen Link</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/sign-in/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center">
+    <div style="margin: auto;">
+      <h1>Kopiere diesen Link</h1>
+      <input id="link" value="<%= link %>" />
+      <button class="btn" data-clipboard-target="#link">
+        <img src="clippy.svg" alt="Copy to clipboard" width="20px" />
+      </button>
+      <p style="color: green; margin-top: 1rem;">
+        Dieser Link ist gültig bis zum <%= expireDate %>
+      </p>
+    </div>
+    <a class="impressum" href="/impressum">Impressum / Disclaimer</a>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script>
+    new ClipboardJS('.btn');
+  </script>
+</html>

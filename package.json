@@ -1,0 +1,24 @@
+{
+  "name": "tuwellogin",
+  "version": "1.0.0",
+  "description": "Login for TUWEL",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johannes Zottele",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "clipboard": "^2.0.4",
+    "cryptr": "^6.0.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
